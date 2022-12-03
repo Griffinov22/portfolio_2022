@@ -1,0 +1,171 @@
+:root {
+  --main-font: "Nunito", sans-serif;
+  --navHeight: 60px;
+  --babyBlue: rgb(155, 221, 255);
+  --peach: rgb(248, 131, 121);
+  --darkBlue: rgb(0, 46, 98);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  /* change this when pushing client */
+  padding-bottom: 200px;
+}
+body:not(nav) {
+  background: radial-gradient(rgba(248, 131, 121, 0.5), rgba(248, 131, 121));
+}
+
+/* Header.jsx */
+.nav {
+  height: var(--navHeight);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  padding-right: max(50px, 8vw);
+  background-color: var(--babyBlue);
+  gap: 25px;
+}
+
+#pic-container {
+  outline: 2px solid black;
+  height: 32px;
+  background-color: transparent;
+  position: relative;
+  z-index: 5;
+}
+#box {
+  width: 100%;
+  height: 100%;
+  background: rgb(253, 213, 44);
+
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  z-index: -2;
+}
+#logo-pic {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9em;
+  position: relative;
+}
+
+.nav-item:hover {
+  color: green;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: yellow;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 300ms;
+}
+.nav-item:hover::before {
+  transform: scaleX(1);
+}
+
+#skills {
+  margin-left: auto;
+}
+
+/* Bio.jsx */
+
+/* .bio-container {
+
+} */
+
+.title {
+  /* "Hello I am.." */
+  height: calc(100vh - var(--navHeight));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  /* adds spacing push up from center */
+  padding-bottom: 2em;
+}
+
+.title span {
+  /* ^^ "Griffin Overmyer" */
+  font-style: italic;
+  display: block;
+  text-indent: 50px;
+}
+
+.bio-div {
+  /* container for everything that is not the title */
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-text {
+  font-size: 1.25em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50vh;
+}
+
+#quote {
+  font-weight: 800;
+  font-size: 1.2em;
+  position: relative;
+}
+
+#quote::before {
+  content: open-quote;
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: -10%;
+  font-size: 3.5em;
+  opacity: 0.5;
+}
+
+#quote::after {
+  content: close-quote;
+  display: block;
+  position: absolute;
+  top: -100%;
+  right: -10%;
+  font-size: 3.5em;
+  opacity: 0.5;
+}
+
+#mandela-name {
+  font-size: 1.2em;
+
+  display: block;
+  width: 100%;
+  text-indent: 15%;
+  line-height: 5;
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Skills.jsx */
