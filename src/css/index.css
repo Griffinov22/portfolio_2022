@@ -4,6 +4,7 @@
   --babyBlue: rgb(155, 221, 255);
   --peach: rgb(248, 131, 121);
   --darkBlue: rgb(0, 46, 98);
+  --skills-item-opacity: 0.4;
 }
 
 *,
@@ -60,7 +61,7 @@ body:not(nav) {
 .nav-item {
   text-decoration: none;
   color: black;
-  font-size: 0.9em;
+  font-size: 1em;
   position: relative;
 }
 
@@ -111,6 +112,7 @@ body:not(nav) {
   /* ^^ "Griffin Overmyer" */
   font-style: italic;
   display: block;
+  width: 100%;
   text-indent: 50px;
 }
 
@@ -125,7 +127,8 @@ body:not(nav) {
 }
 
 .bio-text {
-  font-size: 1.25em;
+  /* "I am a sohomore.." */
+  font-size: 1.5em;
   font-weight: 500;
   text-align: center;
   margin-bottom: 50vh;
@@ -133,7 +136,7 @@ body:not(nav) {
 
 #quote {
   font-weight: 800;
-  font-size: 1.2em;
+  font-size: 1.5em;
   position: relative;
 }
 
@@ -141,8 +144,8 @@ body:not(nav) {
   content: open-quote;
   display: block;
   position: absolute;
-  top: -100%;
-  left: -10%;
+  top: -50%;
+  left: -20%;
   font-size: 3.5em;
   opacity: 0.5;
 }
@@ -151,14 +154,14 @@ body:not(nav) {
   content: close-quote;
   display: block;
   position: absolute;
-  top: -100%;
-  right: -10%;
+  top: -50%;
+  right: -20%;
   font-size: 3.5em;
   opacity: 0.5;
 }
 
 #mandela-name {
-  font-size: 1.2em;
+  font-size: 1.4em;
 
   display: block;
   width: 100%;
@@ -169,3 +172,134 @@ body:not(nav) {
 }
 
 /* Skills.jsx */
+.skills-container {
+  margin-top: 50vh;
+  padding: 0 40px;
+}
+
+/* THESE ARE ALL THE HEADER TEXTS FOR EACH SECTION */
+.section-header {
+  /* fallback for if on mozilla browser */
+  width: 90%;
+  width: fit-content;
+  position: relative;
+}
+
+.section-header hr {
+  display: block;
+  width: 100%;
+  position: absolute;
+  right: -25%;
+  margin-top: 0.25em;
+  height: 3px;
+  background-color: var(--darkBlue);
+  border: none;
+  border-radius: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 75px;
+  width: 100%;
+  /* 60px for padding + offset margin */
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+
+.grid-item {
+  padding: 2px 5px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.grid-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.grid-item h3 {
+  font-size: 1em;
+  font-weight: 500;
+  inline-size: min-content;
+  white-space: nowrap;
+}
+
+.html-highlight {
+  background-color: rgba(250, 104, 0, var(--skills-item-opacity));
+}
+
+.css-highlight {
+  background-color: rgba(3, 155, 229, var(--skills-item-opacity));
+}
+
+.js-highlight {
+  background-color: rgba(255, 214, 0, var(--skills-item-opacity));
+}
+
+.python-highlight {
+  background-color: rgba(23, 255, 87, var(--skills-item-opacity));
+}
+
+.adobe-highlight {
+  background-color: rgba(200, 121, 255, var(--skills-item-opacity));
+}
+
+.vs-code-highlight {
+  background-color: rgba(5, 182, 252, var(--skills-item-opacity));
+}
+
+/* Works.jsx */
+
+#works-section {
+  margin-top: 50vh;
+  padding: 0 40px;
+}
+
+.works-flex-container {
+  margin-top: 30px;
+  gap: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works-flex-item {
+  /* 40% gap 40% */
+  /* 40% gap 40% */
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  aspect-ratio: 1/1;
+  border: 2px solid red;
+  border-radius: 10px;
+  /* same as gap for flex ^^ */
+  margin-top: 10%;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.works-flex-container:nth-child(1),
+.works-flex-container:nth-child(2) {
+  /* taking weird spacing off of top */
+  /* CHANGE WITH MEDIA QUERIES */
+  margin-top: 0;
+}
+
+.works-pic {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+}
+
+.works-caption {
+  width: 100%;
+  height: 50px;
+  background-color: var(--darkBlue);
+  /* flex: 1; */
+  color: var(--babyBlue);
+  padding: 2px 5px;
+  border-radius: 0 0 8px 8px;
+}

@@ -1,4 +1,4 @@
-import logo from "/favicon.svg";
+import logo from "/svg-folder/favicon.svg";
 import "../css/index.css";
 
 function Header() {
