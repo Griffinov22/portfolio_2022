@@ -318,6 +318,7 @@ body:not(nav) {
   display: block;
   position: relative;
   margin: 50px auto;
+  color: black;
   font-family: var(--main-font);
   padding: 10px 20px;
   font-size: 1.25em;
@@ -350,4 +351,5 @@ body:not(nav) {
 
 a:has(button) {
   text-decoration: none;
+  color: black;
 }
