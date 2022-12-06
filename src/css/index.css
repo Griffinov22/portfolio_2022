@@ -119,6 +119,11 @@ body:not(nav) {
     font-size: 2em;
   }
 }
+@media (min-width: 1200px) {
+  .title {
+    font-size: 5em;
+  }
+}
 
 .title span {
   /* ^^ "Griffin Overmyer" */
@@ -146,6 +151,11 @@ body:not(nav) {
   margin-bottom: 45vh;
   /* JS FADING */
   transition: all 1s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .bio-text {
+    font-size: 2.25em;
+  }
 }
 
 #quote {
@@ -197,6 +207,14 @@ body:not(nav) {
     margin-top: 30px;
   }
 }
+@media (min-width: 1200px) {
+  #quote {
+    font-size: 2em;
+  }
+  #mandela-name {
+    font-size: 1.9em;
+  }
+}
 
 /* Skills.jsx */
 .skills-container {
@@ -213,6 +231,11 @@ body:not(nav) {
   width: 90%;
   width: fit-content;
   position: relative;
+}
+@media (min-width: 1200px) {
+  .section-header {
+    font-size: 1.8em;
+  }
 }
 
 .section-header hr {
@@ -252,12 +275,31 @@ body:not(nav) {
   }
 }
 
+/* FIX BACKGROUND COLOR TRANSITION */
 .grid-item {
   padding: 2px 5px;
   border: 2px solid black;
   display: flex;
   align-items: center;
   gap: 5px;
+  position: relative;
+  z-index: 1;
+}
+.grid-item::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: transform 200ms ease-in-out;
+  transform: scale(0);
+
+  transform-origin: left;
+}
+.grid-item::before:hover {
+  transform: scale(1);
 }
 
 .grid-item img {
@@ -275,25 +317,43 @@ body:not(nav) {
 .html-highlight {
   background-color: rgba(250, 104, 0, var(--skills-item-opacity));
 }
+.html-highlight::before {
+  background-color: rgb(250, 104, 0);
+}
 
 .css-highlight {
   background-color: rgba(3, 155, 229, var(--skills-item-opacity));
+}
+.css-highlight::before {
+  background-color: rgb(3, 155, 229);
 }
 
 .js-highlight {
   background-color: rgba(255, 214, 0, var(--skills-item-opacity));
 }
+.js-highlight::before {
+  background-color: rgb(255, 214, 0);
+}
 
 .python-highlight {
   background-color: rgba(23, 255, 87, var(--skills-item-opacity));
+}
+.python-highlight::before {
+  background-color: rgb(23, 255, 87);
 }
 
 .adobe-highlight {
   background-color: rgba(200, 121, 255, var(--skills-item-opacity));
 }
+.adobe-highlight::before {
+  background-color: rgb(200, 121, 255);
+}
 
 .vs-code-highlight {
   background-color: rgba(5, 182, 252, var(--skills-item-opacity));
+}
+.vs-code-highlight::before {
+  background-color: rgb(136, 219, 247);
 }
 
 /* Works.jsx */
@@ -303,12 +363,22 @@ body:not(nav) {
   padding: 0 40px;
   position: relative;
 }
+@media (min-width: 1100px) {
+  #works-section {
+    padding: 0 80px;
+  }
+}
 
 .works-flex-container {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 5%;
+}
+@media (min-width: 1100px) {
+  .works-flex-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .works-flex-item {
@@ -324,6 +394,13 @@ body:not(nav) {
   cursor: pointer;
   overflow: hidden;
 }
+@media (min-width: 1100px) {
+  .works-flex-item {
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .works-pic {
   width: 100%;
@@ -334,9 +411,15 @@ body:not(nav) {
 
 .works-caption {
   background-color: var(--darkBlue);
+  width: 100%;
   flex: 1;
   color: var(--babyBlue);
   padding: 2px 5px;
+}
+@media (min-width: 850px) {
+  .works-caption {
+    font-size: 1.5em;
+  }
 }
 
 /* button under works */
