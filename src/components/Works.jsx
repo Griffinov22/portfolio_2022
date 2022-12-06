@@ -21,7 +21,7 @@ export default function Works() {
           }
         >
           <img className="works-pic" src="/weather-app.jpg" />
-          <p className="works-caption">Weather App (Desktop) </p>
+          <p className="works-caption">Weather App </p>
         </div>
 
         <div
