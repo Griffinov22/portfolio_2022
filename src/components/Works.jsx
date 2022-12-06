@@ -24,14 +24,15 @@ export default function Works() {
           <p className="works-caption">Weather App (Desktop) </p>
         </div>
 
-        <div className="works-flex-item">
-          <img
-            className="works-pic"
-            src="/business-card.jpg"
-            onClick={window.open(
+        <div
+          className="works-flex-item"
+          onClick={() =>
+            window.open(
               "https://business-card-react-parallax-tilt-js.netlify.app/"
-            )}
-          />
+            )
+          }
+        >
+          <img className="works-pic" src="/business-card.jpg" />
           <p className="works-caption">Business Card</p>
         </div>
 
@@ -47,7 +48,7 @@ export default function Works() {
 
         <div
           className="works-flex-item"
-          onClick={window.open("https://air-bnb-template.netlify.app/")}
+          onClick={() => window.open("https://air-bnb-template.netlify.app/")}
         >
           <img className="works-pic" src="/air-bnb.jpg" />
           <p className="works-caption">AirBnB Template (Mobile)</p>
@@ -64,6 +65,12 @@ export default function Works() {
           <p className="works-caption">Dice Game (Desktop)</p>
         </div>
       </div>
+
+      <a href="#nav">
+        <button type="button" id="to-top-btn">
+          --Back To Top--
+        </button>
+      </a>
     </section>
   );
 }

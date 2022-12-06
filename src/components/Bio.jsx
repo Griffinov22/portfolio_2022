@@ -3,8 +3,9 @@ import "../css/index.css";
 export default function Bio() {
   return (
     <div className="bio-container">
-      <h1 className="title">
-        Hello I am <span>Griffin Overmyer</span>
+      <h1 className="title hidden-drop-state">
+        Hello I am
+        <span>Griffin Overmyer</span>
       </h1>
 
       <div className="bio-div">

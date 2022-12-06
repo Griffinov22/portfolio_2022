@@ -1,6 +1,6 @@
 export default function SkillsAndKnowledge() {
   return (
-    <section className="skills-container">
+    <section id="skills-box" className="skills-container">
       <h2 className="section-header">
         Skills & Knowledge
         <hr />
