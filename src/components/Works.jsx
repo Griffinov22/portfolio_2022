@@ -43,7 +43,7 @@ export default function Works() {
           }
         >
           <img className="works-pic" src="/travel-site.jpg" />
-          <p className="works-caption">Travel book Mock (Desktop)</p>
+          <p className="works-caption">Travel book Mock</p>
         </div>
 
         <div
