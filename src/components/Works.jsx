@@ -8,7 +8,7 @@ export default function Works() {
       <div className="works-flex-container">
         <div
           className="works-flex-item"
-          onClick={() => window.open("https://www.coffeelogic.me")}
+          onClick={() => window.open("https://coffee-logic.netlify.app/")}
         >
           <img className="works-pic" src="/coffee-logic.jpg" />
           <p className="works-caption">CoffeeLogic Website</p>
