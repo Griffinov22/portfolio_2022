@@ -51,7 +51,7 @@ export default function Works() {
           onClick={() => window.open("https://air-bnb-template.netlify.app/")}
         >
           <img className="works-pic" src="/air-bnb.jpg" />
-          <p className="works-caption">AirBnB Template (Mobile)</p>
+          <p className="works-caption">AirBnB Template</p>
         </div>
 
         <div className="works-flex-item">
