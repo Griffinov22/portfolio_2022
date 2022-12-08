@@ -62,7 +62,7 @@ export default function Works() {
               window.open("https://griffin-hold-dice-game.netlify.app/")
             }
           />
-          <p className="works-caption">Dice Game (Desktop)</p>
+          <p className="works-caption">Dice Game</p>
         </div>
       </div>
 
