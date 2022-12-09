@@ -16,6 +16,14 @@ export default function Works() {
 
         <div
           className="works-flex-item"
+          onClick={() => window.open("https://purduesg.org/")}
+        >
+          <img className="works-pic" src="/coffee-logic.jpg" />
+          <p className="works-caption">Purdue Student Government</p>
+        </div>
+
+        <div
+          className="works-flex-item"
           onClick={() =>
             window.open("https://griffin-summer-project-2022.netlify.app/")
           }
