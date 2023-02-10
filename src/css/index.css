@@ -232,11 +232,25 @@ svg path {
 
 /* Skills.jsx */
 .skills-container {
-  margin-top: 45vh;
-  padding: 0 40px;
-
+  margin-top: 10vh;
+  padding: 14rem 40px;
+  position: relative;
   /* JS FADING */
   transition: all 1s ease-in-out;
+
+  /* css generators */
+  background-color: var(--orange);
+
+  --mask: radial-gradient(6.71rem at 50% 9rem, #000 99%, #0000 101%)
+      calc(50% - 6rem) 0/12rem 51% repeat-x,
+    radial-gradient(6.71rem at 50% -6rem, #0000 99%, #000 101%) 50% 3rem/12rem
+      calc(51% - 3rem) repeat-x,
+    radial-gradient(6.71rem at 50% calc(100% - 9rem), #000 99%, #0000 101%)
+      calc(50% - 6rem) 100%/12rem 51% repeat-x,
+    radial-gradient(6.71rem at 50% calc(100% + 6rem), #0000 99%, #000 101%) 50%
+      calc(100% - 3rem) / 12rem calc(51% - 3rem) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 /* THESE ARE ALL THE HEADER TEXTS FOR EACH SECTION */
@@ -373,7 +387,7 @@ svg path {
 /* Works.jsx */
 
 #works-section {
-  margin-top: 25vh;
+  margin-top: 10vh;
   padding: 0 40px;
   position: relative;
 }
@@ -397,7 +411,9 @@ svg path {
 
 .works-flex-item {
   /* CONTAINS OVERFLOW:HIDDEN */
+  --transition-speed: 300ms;
   display: flex;
+  position: relative;
   width: 100%;
   flex-direction: column;
   aspect-ratio: 1/1;
@@ -407,6 +423,8 @@ svg path {
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   overflow: hidden;
+
+  transition: all var(--transition-speed) ease-in-out;
 }
 @media (min-width: 1100px) {
   .works-flex-item {
@@ -415,14 +433,48 @@ svg path {
     align-items: center;
   }
 }
+.works-flex-item:before,
+.works-flex-item:after {
+  content: "";
+  transition: opacity var(--transition-speed) ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* .works-flex-item:hover {
+} */
+.works-flex-item:hover:before {
+  /* BLUR LAYER */
+  content: "";
+  filter: blur(1rem);
+  background-color: black;
+  opacity: 0.8;
+  z-index: 1;
+}
+.works-flex-item:hover:after {
+  content: attr(data-knowledge);
+  padding: 1rem;
+  line-height: 1.2;
+  display: flex;
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+}
 
 .works-pic {
+  display: block;
   width: 100%;
   height: 80%;
 
   object-fit: cover;
 }
-
 .works-caption {
   background-color: var(--darkBlue);
   color: var(--orange);
