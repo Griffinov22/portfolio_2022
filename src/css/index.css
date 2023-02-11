@@ -157,9 +157,9 @@ svg path {
   align-items: center;
 }
 
-.bio-text {
+.student-div {
   /* "I am a sohomore.." */
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
   margin-bottom: 45vh;
@@ -167,8 +167,69 @@ svg path {
   transition: all 1s ease-in-out;
 }
 @media (min-width: 1200px) {
-  .bio-text {
-    font-size: 2.25em;
+  .student-div {
+    font-size: 2rem;
+  }
+}
+
+.svg-bundle {
+  position: relative;
+}
+
+#student-svg {
+  stroke: black;
+  fill: none;
+  margin-inline: auto;
+  width: 40vw;
+  height: 40vw;
+  max-width: 300px;
+  max-height: 300px;
+  stroke-dasharray: 85.43;
+  stroke-dashoffset: 85.43;
+  transition: all 200ms ease-in-out;
+  /* used in js */
+  /* animation: fillSvg 2s ease-in forwards; */
+}
+@keyframes fillSvg {
+  from {
+    stroke-dashoffset: 85.43;
+    stroke: black;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke: rgb(131, 95, 6);
+  }
+}
+#purdue-svg {
+  width: fit-content;
+  height: 20%;
+  display: block;
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  transform: scale(1);
+  opacity: 0;
+  /* done with observer in index.js */
+  /* animation: purdueChange 500ms ease-in 1.5s; */
+}
+@keyframes purdueChange {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  87% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -233,7 +294,7 @@ svg path {
 /* Skills.jsx */
 .skills-container {
   margin-top: 10vh;
-  padding: 14rem 40px;
+  padding: 10rem 40px;
   position: relative;
   /* JS FADING */
   transition: all 1s ease-in-out;
