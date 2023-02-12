@@ -202,7 +202,7 @@ svg path {
 }
 #purdue-svg {
   width: fit-content;
-  max-width: 100px;
+  max-width: 300px;
   height: 20%;
   display: block;
   position: absolute;
