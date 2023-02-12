@@ -209,8 +209,7 @@ svg path {
   left: 0;
   right: 0;
   margin-inline: auto;
-  margin-left: auto;
-  margin-right: auto;
+  -webkit-transform: scale(1);
   transform: scale(1);
   opacity: 0;
   /* done with observer in index.js */
@@ -222,15 +221,18 @@ svg path {
   }
   75% {
     opacity: 1;
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 
   87% {
     opacity: 1;
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
   }
   100% {
     opacity: 1;
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
