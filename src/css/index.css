@@ -209,9 +209,10 @@ svg path {
   left: 0;
   right: 0;
   margin-inline: auto;
-  -webkit-transform: scale(1);
   transform: scale(1);
   opacity: 0;
+  appearance: none;
+  -webkit-appearance: none;
   /* done with observer in index.js */
   /* animation: purdueChange 500ms ease-in 1.5s; */
 }
@@ -221,19 +222,16 @@ svg path {
   }
   75% {
     opacity: 1;
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
 
   87% {
     opacity: 1;
-    -webkit-transform: scale(1.2);
     transform: scale(1.2);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
