@@ -213,6 +213,7 @@ svg path {
   opacity: 0;
   appearance: none;
   -webkit-animation: purdueChange 1s ease-in-out 1.5s forwards;
+
   /* done with observer in index.js */
   /* animation: purdueChange 500ms ease-in 1.5s; */
 }
