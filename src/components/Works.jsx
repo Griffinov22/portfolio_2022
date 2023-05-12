@@ -38,7 +38,7 @@ export default function Works() {
 
         <div
           className="works-flex-item"
-          data-knowledge="This business card was built with React.js and Tilt.js frameworks...if your okay with calling React.js a framework 😂"
+          data-knowledge="This business card was built with React.js and Tilt.js frameworks...if your okay with calling React.js a framework"
           onClick={() =>
             window.open(
               "https://business-card-react-parallax-tilt-js.netlify.app/"
